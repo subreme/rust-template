@@ -1,5 +1,9 @@
 # {{project-name}}
 
+[![Template](https://img.shields.io/badge/Template-subreme%2Frust--template-orange)](https://github.com/subreme/rust-template/)
+[![License](https://img.shields.io/badge/License-MIT%2FApache--2.0-green)](https://github.com/{{username}}/{{project-name}}/#license)
+[![Release](https://img.shields.io/github/v/release/{{username}}/{{project-name}}?label=Release&color=blue&sort=semver)](https://github.com/{{username}}/{{project-name}}/releases/latest/)
+
 ## Installation
 
 ### Cargo
