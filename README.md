@@ -43,7 +43,7 @@ cargo generate --git https://github.com/subreme/rust-template
 
 Once the first command is run, a prompt will appear asking for the project's
 name. Once a name is selected, all placeholders in the project's files, outlined
-by `{{double curly brackets}}`, will be automatically replaced by their
+by double curly brackets, will be automatically replaced by their
 corresponding values.
 
 ## License
