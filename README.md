@@ -49,6 +49,14 @@ project's name. Once a name is selected, all placeholders in the
 project's files, outlined by double curly brackets, will be
 automatically replaced by their corresponding values.
 
+Alternatively, the project name can be passed using the `--name` flag,
+as done in the underlined part of the example below:
+
+```console
+cargo generate --git https://github.com/subreme/rust-template --name project-name
+                                                              -------------------
+```
+
 ## License
 
 Licensed under either of
