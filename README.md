@@ -37,7 +37,8 @@ page](https://github.com/{{gh-username}}/{{project-name}}/releases/latest).
 
 Assuming you have [Cargo
 installed](https://www.rust-lang.org/tools/install), the simplest way to
-use the template is through the `cargo generate` tool, which can be
+use the template is through the [`cargo
+generate`](https://crates.io/crates/cargo-generate) tool, which can be
 downloaded using the following command:
 
 ```console
