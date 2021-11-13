@@ -35,8 +35,17 @@ page](https://github.com/{{gh-username}}/{{project-name}}/releases/latest).
 
 ### Generation
 
-Assuming you have [Cargo installed](#cargo), the simplest way to use the
-template is to use the following command:
+Assuming you have [Cargo
+installed](https://www.rust-lang.org/tools/install), the simplest way to
+use the template is through the `cargo generate` tool, which can be
+downloaded using the following command:
+
+```console
+cargo install cargo-generate
+```
+
+Once installed, it can be used to generate a new project from the
+template as shown below:
 
 ```console
 cargo generate --git https://github.com/subreme/rust-template
