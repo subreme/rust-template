@@ -8,7 +8,7 @@ wish to make by creating a new issue before making the change.
 ## Reporting issues
 
 Before reporting an issue on the
-[issue tracker](https://github.com/{{username}}/{{project-name}}/issues),
+[issue tracker](https://github.com/{{gh-username}}/{{project-name}}/issues),
 please check that it has not already been reported by searching for some related
 keywords.
 
@@ -19,7 +19,7 @@ Try to do one pull request per change.
 ### Updating the changelog
 
 Update the changes you have made in
-[CHANGELOG](https://github.com/{{username}}/{{project-name}}/blob/main/CHANGELOG.md)
+[CHANGELOG](https://github.com/{{gh-username}}/{{project-name}}/blob/main/CHANGELOG.md)
 file under the **Unreleased** section.
 
 Add the changes of your pull request to one of the following subsections,
@@ -42,9 +42,9 @@ If the required subsection does not exist yet under **Unreleased**, create it!
 This is no different than other Rust projects.
 
 ```shell
-git clone https://github.com/{{username}}/{{project-name}}
+git clone https://github.com/{{gh-username}}/{{project-name}}
 cd {{project-name}}
-cargo build
+cargo test
 ```
 
 ### Useful Commands
@@ -58,13 +58,13 @@ cargo build
 - Run Clippy:
 
   ```shell
-  cargo clippy --all
+  cargo clippy --all-targets --all-features --workspace
   ```
 
 - Run all tests:
 
   ```shell
-  cargo test --all
+  cargo test --all-features --workspace
   ```
 
 - Check to see if there are code formatting issues

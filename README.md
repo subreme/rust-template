@@ -1,10 +1,10 @@
 # {{project-name}}
 
 [![Template](https://img.shields.io/badge/template-subreme%2Frust--template-orange)](https://github.com/subreme/rust-template/)
-[![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-green)](https://github.com/{{username}}/{{project-name}}/#license)
+[![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-green)](https://github.com/{{gh-username}}/{{project-name}}/#license)
 [![Dependency
 Status](https://deps.rs/repo/github/subreme/rust-template/status.svg)](https://deps.rs/repo/github/subreme/rust-template)
-[![Release](https://img.shields.io/github/v/release/{{username}}/{{project-name}}?color=blue&sort=semver)](https://github.com/{{username}}/{{project-name}}/releases/latest/)
+[![Release](https://img.shields.io/github/v/release/{{gh-username}}/{{project-name}}?color=blue&sort=semver)](https://github.com/{{gh-username}}/{{project-name}}/releases/latest/)
 
 ## Introduction
 
@@ -24,12 +24,12 @@ The project can be installed using Cargo through the following steps:
 * Install the Rust toolchain using the [official
   guide](https://www.rust-lang.org/tools/install).
 * Run `cargo install --git
-  https://github.com/{{username}}/{{project-name}} --branch main`
+  https://github.com/{{gh-username}}/{{project-name}} --branch main`
 
 ### Releases
 
 Alternatively, the compiled binaries can be found in the [Releases
-page](https://github.com/{{username}}/{{project-name}}/releases/latest).
+page](https://github.com/{{gh-username}}/{{project-name}}/releases/latest).
 
 ## Usage
 

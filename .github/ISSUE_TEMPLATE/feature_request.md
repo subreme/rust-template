@@ -11,7 +11,6 @@ assignees: ''
 
 <!--
 If your feature request is related to a problem, please describe it.
-Ex. I hate when [...]
 -->
 
 ## Solution

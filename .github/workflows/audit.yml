@@ -1,8 +1,7 @@
-name: Security audit
+name: Security Audit
 
 on:
   schedule:
-    # Runs at 00:00 UTC everyday
     - cron: '0 0 * * *'
   push:
     paths:
@@ -14,8 +13,14 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v2
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
       - uses: actions-rs/audit-check@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
