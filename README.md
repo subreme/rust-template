@@ -21,9 +21,9 @@ below:
 
 The project can be installed using Cargo through the following steps:
 
-* Install the Rust toolchain using the [official
+- Install the Rust toolchain using the [official
   guide](https://www.rust-lang.org/tools/install).
-* Run `cargo install --git
+- Run `cargo install --git
   https://github.com/{{gh-username}}/{{project-name}} --branch main`
 
 ### Releases
@@ -71,9 +71,9 @@ cargo generate --git https://github.com/subreme/rust-template --name project-nam
 
 Licensed under either of
 
-* Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or
+- Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or
   <http://www.apache.org/licenses/LICENSE-2.0>)
-* MIT license ([LICENSE-MIT](LICENSE-MIT) or
+- MIT license ([LICENSE-MIT](LICENSE-MIT) or
   <http://opensource.org/licenses/MIT>)
 
 at your option.
