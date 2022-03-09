@@ -3,7 +3,7 @@ name: CD # Continuous Deployment
 on:
   push:
     tags:
-      - '[0-9]+.[0-9]+.[0-9]+'
+      - '[v]?[0-9]+.[0-9]+.[0-9]+'
 jobs:
   publish:
     name: Publish for {{ "${{ matrix.job.os " }}}}
@@ -43,7 +43,7 @@ jobs:
             binary-postfix: ""
             use-cross: true
     steps:
-      - name: Install Rust Toolchain
+      - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
           toolchain: {{ "${{ matrix.rust " }}}}
@@ -51,6 +51,8 @@ jobs:
           override: true
       - name: Checkout Repository
         uses: actions/checkout@v2
+      - name: Load Cache
+        uses: Swatinem/rust-cache@v1
       - name: Cargo Build
         uses: actions-rs/cargo@v1
         with:

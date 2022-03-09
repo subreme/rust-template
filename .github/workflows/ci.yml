@@ -8,7 +8,7 @@ on:
 {% raw  %}
 jobs:
   test:
-    name: Test Suite
+    name: Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -19,7 +19,10 @@ jobs:
           toolchain: stable
           profile: minimal
           override: true
-      - uses: actions-rs/cargo@v1
+      - name: Load Cache
+        uses: Swatinem/rust-cache@v1
+      - name: Run Tests
+        uses: actions-rs/cargo@v1
         with:
           command: test
           args: --all-features --workspace
@@ -36,6 +39,8 @@ jobs:
           profile: minimal
           override: true
           components: rustfmt
+      - name: Load Cache
+        uses: Swatinem/rust-cache@v1
       - name: Check Formatting
         uses: actions-rs/cargo@v1
         with:
@@ -54,7 +59,9 @@ jobs:
           profile: minimal
           override: true
           components: clippy
-      - name: Clippy Check
+      - name: Load Cache
+        uses: Swatinem/rust-cache@v1
+      - name: Run Clippy
         uses: actions-rs/cargo@v1
         with:
           command: clippy
@@ -71,6 +78,8 @@ jobs:
           toolchain: stable
           profile: minimal
           override: true
+      - name: Load Cache
+        uses: Swatinem/rust-cache@v1
       - name: Check Documentation
         env:
           RUSTDOCFLAGS: -D warnings
@@ -79,7 +88,7 @@ jobs:
           command: doc
           args: --no-deps --document-private-items --all-features --workspace
   publish-dry-run:
-    name: Publish Dry Run
+    name: Publish Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -90,7 +99,10 @@ jobs:
           toolchain: stable
           profile: minimal
           override: true
-      - uses: actions-rs/cargo@v1
+      - name: Load Cache
+        uses: Swatinem/rust-cache@v1
+      - name: Publish Dry Run
+        uses: actions-rs/cargo@v1
         with:
           command: publish
           args: --dry-run
@@ -106,7 +118,9 @@ jobs:
           toolchain: stable
           profile: minimal
           override: true
-      - name: Run cargo-tarpaulin
+      - name: Load Cache
+        uses: Swatinem/rust-cache@v1
+      - name: Run Tarpaulin
         uses: actions-rs/tarpaulin@v0.1
         with:
           args: '--all-features --workspace --ignore-tests --out Lcov'
